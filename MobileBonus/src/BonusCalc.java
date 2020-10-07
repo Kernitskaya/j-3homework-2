@@ -5,10 +5,11 @@ public class BonusCalc {
 
     static int bonuscalculator(int currentBill, int payment) {
         int total = currentBill + payment;
+        int bonusRubles = 0;
         if (payment>BONUS_LIMIT) {
-            int bonusRubles = payment/BONUS_STEP*BONUS_GIFT;
+            bonusRubles = payment/BONUS_STEP*BONUS_GIFT;
             total = total + bonusRubles;
         }
-        return total;
+        return bonusRubles;
     }
 }
